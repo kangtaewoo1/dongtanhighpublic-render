@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>동탄 하이퍼블릭 픽업 안내 | 동탄 전 지역 무료 픽업</title>
+<meta name="description" content="동탄역·동탄2·반송동·병점·진안동·능동·산척동·영천동 하이퍼블릭 무료 픽업 안내. 24시간 연중무휴, 대기 없이 신속 픽업. 동탄 전 지역 커버.">
+<link rel="canonical" href="https://dongtanhighpublic.onrender.com/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:title" content="동탄 하이퍼블릭 픽업 안내 | 동탄 전 지역 무료 픽업">
+<meta property="og:description" content="동탄역·동탄2·반송동·병점 등 동탄 전 지역 하이퍼블릭 무료 픽업. 24시간 운영.">
+<meta name="geo.region" content="KR-41">
+<meta name="geo.placename" content="경기도 화성시 동탄">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#080808;--surface:#111;--surface2:#181818;
+  --gold:#C9A84C;--gold2:#E8C96A;--gold-dim:#8a6f2e;
+  --text:#F0EAD6;--muted:#888;--border:#2a2a2a;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+
+header{position:fixed;top:0;left:0;right:0;z-index:200;transition:background .3s}
+header.scrolled{background:rgba(8,8,8,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 40px}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-mark{width:36px;height:36px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.85rem;color:#000}
+.logo-text{font-size:.95rem;font-weight:700;letter-spacing:2px}
+.logo-sub{font-size:.7rem;color:var(--muted);letter-spacing:1px;display:block}
+nav{display:flex;gap:32px}
+nav a{font-size:.85rem;letter-spacing:1px;color:var(--muted);transition:.2s;font-weight:500}
+nav a:hover{color:var(--gold)}
+.tel-btn{background:transparent;border:1px solid var(--gold);color:var(--gold);padding:9px 22px;border-radius:3px;font-size:.85rem;font-weight:700;letter-spacing:1px;transition:.2s}
+.tel-btn:hover{background:var(--gold);color:#000}
+
+.hero{height:100vh;min-height:640px;position:relative;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(160deg,#080c12 0%,#0a0a0a 50%,#100808 100%)}
+.hero-glow{position:absolute;width:700px;height:500px;border-radius:50%;background:radial-gradient(ellipse,rgba(201,168,76,.1) 0%,transparent 70%);top:40%;left:30%;transform:translate(-50%,-50%);pointer-events:none}
+.hero-content{position:relative;z-index:2;width:100%}
+.hero-label{display:inline-block;border:1px solid var(--gold-dim);color:var(--gold);font-size:.72rem;letter-spacing:4px;padding:6px 18px;margin-bottom:28px;text-transform:uppercase}
+.hero h1{font-size:3.2rem;font-weight:900;line-height:1.2;margin-bottom:20px;letter-spacing:-1px}
+.hero h1 em{display:block;background:linear-gradient(90deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:normal}
+.hero-desc{font-size:1rem;color:var(--muted);max-width:500px;margin-bottom:40px;line-height:1.9}
+.hero-cta{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:#000;padding:14px 36px;font-size:1rem;font-weight:700;letter-spacing:1px}
+.hero-cta:hover{background:var(--gold2)}
+.scroll-line-wrap{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--muted);font-size:.72rem;letter-spacing:2px}
+.scroll-line{width:1px;height:48px;background:linear-gradient(to bottom,var(--gold),transparent);animation:sdown 1.6s ease infinite}
+@keyframes sdown{0%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(12px)}}
+
+section{padding:96px 0}
+.sec-label{font-size:.7rem;letter-spacing:4px;color:var(--gold);text-transform:uppercase;margin-bottom:14px;display:block}
+.sec-title{font-size:2.4rem;font-weight:900;margin-bottom:10px;letter-spacing:-1px}
+.divider{width:40px;height:2px;background:var(--gold);margin:16px 0 40px}
+.sec-sub{color:var(--muted);font-size:.95rem;margin-bottom:56px;line-height:1.7}
+
+/* MAP GRID */
+.area-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
+.area-card{background:var(--surface);padding:32px 24px;position:relative;overflow:hidden;transition:.3s}
+.area-card::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:.3s}
+.area-card:hover::after{transform:scaleX(1)}
+.area-card:hover{background:var(--surface2)}
+.area-name{font-size:1.1rem;font-weight:700;margin-bottom:10px;color:var(--text)}
+.area-detail{font-size:.83rem;color:var(--muted);line-height:1.8}
+.area-time{display:inline-block;margin-top:12px;font-size:.75rem;color:var(--gold);border:1px solid var(--gold-dim);padding:3px 10px}
+
+/* HOW */
+.how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
+.how-card{background:var(--surface);padding:36px 28px;text-align:center}
+.how-num{font-size:2rem;font-weight:900;color:var(--gold);margin-bottom:16px;font-family:serif;opacity:.4}
+.how-icon{font-size:2rem;margin-bottom:16px}
+.how-title{font-size:1rem;font-weight:700;margin-bottom:8px}
+.how-desc{font-size:.84rem;color:var(--muted);line-height:1.8}
+
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;gap:2px}
+.faq-item{background:var(--surface);overflow:hidden}
+.faq-q{padding:22px 28px;font-weight:600;font-size:.95rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:.2s}
+.faq-q:hover{color:var(--gold)}
+.faq-icon{width:20px;height:20px;border:1px solid var(--muted);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.65rem;flex-shrink:0;transition:.3s}
+.faq-item.open .faq-icon{border-color:var(--gold);color:var(--gold);transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-item.open .faq-a{max-height:160px}
+.faq-a-inner{padding:0 28px 22px;font-size:.88rem;color:var(--muted);line-height:1.8;border-left:2px solid var(--gold);margin:0 28px 22px}
+
+/* LINKS */
+.link-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.link-card{background:var(--surface);padding:28px 24px;display:flex;align-items:center;gap:14px;transition:.3s;border-top:1px solid var(--border)}
+.link-card:hover{border-top-color:var(--gold);background:var(--surface2)}
+.link-icon{font-size:1.6rem;flex-shrink:0}
+.link-name{font-size:.95rem;font-weight:700;margin-bottom:4px}
+.link-desc{font-size:.78rem;color:var(--muted)}
+
+/* CTA */
+.cta-section{background:linear-gradient(135deg,#0f0c06,#1a1200);text-align:center;padding:96px 0;position:relative;overflow:hidden}
+.cta-glow{position:absolute;width:500px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,.07) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%)}
+.cta-tel{display:inline-flex;align-items:center;gap:12px;background:var(--gold);color:#000;padding:16px 48px;font-size:1.1rem;font-weight:900;letter-spacing:2px;margin-top:36px;transition:.2s}
+.cta-tel:hover{background:var(--gold2)}
+.cta-note{font-size:.8rem;color:var(--muted);margin-top:16px}
+
+footer{background:#000;border-top:1px solid var(--border);padding:32px 0;text-align:center}
+footer p{font-size:.78rem;color:var(--muted);line-height:1.9}
+
+.floating-tel{position:fixed;bottom:28px;right:28px;z-index:300;background:var(--gold);color:#000;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;box-shadow:0 4px 24px rgba(201,168,76,.4);transition:.2s}
+.floating-tel:hover{background:var(--gold2);transform:scale(1.05)}
+
+@media(max-width:900px){
+  .header-inner{padding:14px 20px}
+  nav{display:none}
+  .hero h1{font-size:2rem}
+  .area-grid,.how-grid,.link-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+  .area-grid,.how-grid{grid-template-columns:1fr}
+  .hero h1{font-size:1.7rem}
+  .sec-title{font-size:1.8rem}
+  section{padding:64px 0}
+}
+</style>
+</head>
+<body>
+
+<header id="header">
+  <div class="header-inner">
+    <div class="logo">
+      <div class="logo-mark">동</div>
+      <div>
+        <div class="logo-text">동탄하이퍼블릭</div>
+        <span class="logo-sub">PICKUP GUIDE</span>
+      </div>
+    </div>
+    <nav>
+      <a href="#areas">픽업 지역</a>
+      <a href="#how">이용 방법</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a href="tel:01056719712" class="tel-btn">📞 픽업 요청</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content wrap">
+    <div class="hero-label">DONGTAN PICKUP SERVICE</div>
+    <h1>동탄 어디서든<br><em>무료 픽업</em><br>신속하게 모십니다</h1>
+    <p class="hero-desc">동탄역부터 동탄2신도시, 반송동, 병점, 진안동, 능동, 산척동, 영천동까지.<br>동탄 전 지역 무료 픽업 — 픽업 요청 후 5~15분 내 도착.</p>
+    <a href="tel:01056719712" class="hero-cta">📞 지금 픽업 요청하기</a>
+  </div>
+  <div class="scroll-line-wrap">
+    <span>SCROLL</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- AREAS -->
+<section id="areas">
+  <div class="wrap">
+    <span class="sec-label">PICKUP AREAS</span>
+    <h2 class="sec-title">픽업 가능 지역</h2>
+    <div class="divider"></div>
+    <p class="sec-sub">동탄 전 지역 무료 픽업. 아래 지역 외에도 동탄 인근이라면 언제든 문의하세요.</p>
+    <div class="area-grid">
+      <div class="area-card">
+        <div class="area-name">동탄역 일대</div>
+        <div class="area-detail">SRT 동탄역·GTX 동탄역 인근. 역 광장·상업가·호텔 등 어디서든 픽업.</div>
+        <span class="area-time">약 5분 이내</span>
+      </div>
+      <div class="area-card">
+        <div class="area-name">동탄2신도시</div>
+        <div class="area-detail">동탄2 아파트 단지·카페거리·주요 상가 앞 픽업 가능. 위치 공유 후 안내.</div>
+        <span class="area-time">약 7분 이내</span>
+      </div>
+      <div class="area-card">
+        <div class="area-name">반송동·메타폴리스</div>
+        <div class="area-detail">메타폴리스·롯데백화점·CGV 인근 픽업. 동탄 상업의 중심 지역.</div>
+        <span class="area-time">약 8분 이내</span>
+      </div>
+      <div class="area-card">
+        <div class="area-name">병점·진안동</div>
+        <div class="area-detail">병점역 인근·진안동 주거지·병점 상권에서 픽업 가능. 수원 경계 인근.</div>
+        <span class="area-time">약 10분 이내</span>
+      </div>
+      <div class="area-card">
+        <div class="area-name">능동</div>
+        <div class="area-detail">능동 주거지·상가에서 픽업. 동탄2 인접 지역.</div>
+        <span class="area-time">약 8분 이내</span>
+      </div>
+      <div class="area-card">
+        <div class="area-name">산척동</div>
+        <div class="area-detail">산척동 주요 거점에서 픽업 가능. 사전 위치 공유 시 더 정확한 픽업.</div>
+        <span class="area-time">약 12분 이내</span>
+      </div>
+      <div class="area-card">
+        <div class="area-name">영천동</div>
+        <div class="area-detail">영천동 신규 단지·주요 거점 픽업. 동탄 외곽이지만 무료 서비스 동일.</div>
+        <span class="area-time">약 12분 이내</span>
+      </div>
+      <div class="area-card">
+        <div class="area-name">동탄 인근 기타</div>
+        <div class="area-detail">위에 없는 지역도 동탄 생활권이라면 가능. 전화 문의 주시면 안내드립니다.</div>
+        <span class="area-time">협의 가능</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section id="how" style="background:var(--surface)">
+  <div class="wrap">
+    <span class="sec-label">HOW TO USE</span>
+    <h2 class="sec-title">픽업 이용 방법</h2>
+    <div class="divider"></div>
+    <p class="sec-sub">전화 한 통이면 끝. 복잡한 앱 예약 없이 4단계로 이용하세요.</p>
+    <div class="how-grid">
+      <div class="how-card">
+        <div class="how-num">01</div>
+        <div class="how-icon">📞</div>
+        <div class="how-title">전화 문의</div>
+        <div class="how-desc">24시간 언제든 전화하세요. 현재 위치·인원·예산을 간단히 말씀해 주세요.</div>
+      </div>
+      <div class="how-card">
+        <div class="how-num">02</div>
+        <div class="how-icon">🚗</div>
+        <div class="how-title">픽업 차량 배정</div>
+        <div class="how-desc">위치 확인 후 즉시 차량을 배정합니다. 평균 5~15분 내 도착합니다.</div>
+      </div>
+      <div class="how-card">
+        <div class="how-num">03</div>
+        <div class="how-icon">🎤</div>
+        <div class="how-title">하이퍼블릭 이용</div>
+        <div class="how-desc">전용 룸에서 편하게 이용하시면 됩니다. 사전 안내받은 대로 진행됩니다.</div>
+      </div>
+      <div class="how-card">
+        <div class="how-num">04</div>
+        <div class="how-icon">💳</div>
+        <div class="how-title">이용 후 결제</div>
+        <div class="how-desc">선입금 없이 이용 후 결제합니다. 현금·법인카드 모두 가능합니다.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <span class="sec-label">FAQ</span>
+    <h2 class="sec-title">픽업 관련 FAQ</h2>
+    <div class="divider"></div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">픽업비가 따로 있나요? <span class="faq-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">동탄 전 지역 픽업은 100% 무료입니다. 위치에 따른 추가 요금은 없습니다.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">픽업까지 얼마나 걸리나요? <span class="faq-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">지역·시간대에 따라 다르지만 평균 5~15분 내 도착합니다. 동탄역 중심부는 5분 이내가 대부분입니다.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">새벽에도 픽업이 되나요? <span class="faq-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">24시간 운영합니다. 새벽 픽업도 가능하니 언제든지 전화 주세요.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">위치를 정확히 모를 때는 어떻게 하나요? <span class="faq-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">현재 보이는 건물명이나 주변 상호명을 말씀해 주시면 안내드립니다. 카카오맵·네이버지도 핀 공유도 가능합니다.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">여러 명이 각각 다른 곳에 있어도 픽업되나요? <span class="faq-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">인원이 많을 경우 여러 위치에서 순차 픽업이 가능합니다. 사전에 인원과 위치를 알려주세요.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LINKS -->
+<section style="background:var(--surface)">
+  <div class="wrap">
+    <span class="sec-label">RELATED</span>
+    <h2 class="sec-title">관련 사이트</h2>
+    <div class="divider"></div>
+    <div class="link-grid">
+      <a href="https://dongtanhyperpublic.com/" class="link-card">
+        <div class="link-icon">🏠</div>
+        <div>
+          <div class="link-name">동탄하이퍼블릭 공식</div>
+          <div class="link-desc">공식 대표 사이트</div>
+        </div>
+      </a>
+      <a href="https://dongtanhighpublic-kr.web.app/" class="link-card">
+        <div class="link-icon">💰</div>
+        <div>
+          <div class="link-name">가격·시스템 안내</div>
+          <div class="link-desc">투명한 요금 공개</div>
+        </div>
+      </a>
+      <a href="https://dongtanhighpublic.netlify.app/" class="link-card">
+        <div class="link-icon">🔍</div>
+        <div>
+          <div class="link-name">비교 선택 가이드</div>
+          <div class="link-desc">하이퍼블릭 vs 룸싸롱</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-glow"></div>
+  <div class="wrap" style="position:relative;z-index:2">
+    <span class="sec-label" style="display:block;text-align:center">CONTACT</span>
+    <h2 class="sec-title" style="text-align:center">픽업 요청하기</h2>
+    <div class="divider" style="margin:16px auto 20px"></div>
+    <p style="color:var(--muted);text-align:center">동탄 전 지역 무료 픽업 · 24시간 운영</p>
+    <div style="text-align:center">
+      <a href="tel:01056719712" class="cta-tel">📞 010-5671-9712</a>
+      <p class="cta-note">24시간 365일</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>동탄 하이퍼블릭 픽업 안내 | 경기도 화성시 동탄 | 24시간 무료 픽업</p>
+</footer>
+<a href="tel:01056719712" class="floating-tel">📞</a>
+
+<script>
+const header=document.getElementById('header');
+window.addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>60));
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const item=q.closest('.faq-item'),was=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+    if(!was)item.classList.add('open');
+  });
+});
+</script>
+</body>
+</html>
